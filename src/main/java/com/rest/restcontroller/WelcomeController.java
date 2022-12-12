@@ -11,7 +11,7 @@ public class WelcomeController {
 	
 	@GetMapping("/welcome")
 	public ResponseEntity<String> wish(){
-		return new ResponseEntity<>("Assalamualikum, Welcome to Rest Controller", HttpStatus.OK);
+		return new ResponseEntity<>("Welcome to Rest Controller", HttpStatus.OK);
 	}
 
 }
