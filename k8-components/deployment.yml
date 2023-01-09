@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-rest-app-deployment
+  labels:
+    app: springboot
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: springboot
+  template:
+    metadata:
+      name: springboot-rest-app-pods
+      labels:
+        app: springboot
+    spec:
+      containers:
+        - name: springboot-rest-app-cntnr
+          image: saleem786/spring-boot-rest-img
+          ports:
+            - containerPort: 8080
