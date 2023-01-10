@@ -9,9 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WelcomeController {
 	
+	@GetMapping("/greet")
+	public ResponseEntity<String> greet(){
+		return new ResponseEntity<>("Bismillah, Allah bless you!!!", HttpStatus.OK);
+	}
 	@GetMapping("/welcome")
 	public ResponseEntity<String> wish(){
 		return new ResponseEntity<>("Welcome to Rest Controller", HttpStatus.OK);
 	}
-
+    
 }
