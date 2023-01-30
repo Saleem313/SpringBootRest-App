@@ -15,7 +15,7 @@ public class WelcomeController {
 	}
 	@GetMapping("/welcome")
 	public ResponseEntity<String> wish(){
-		return new ResponseEntity<>("Welcome to Rest Controller", HttpStatus.OK);
+		return new ResponseEntity<>("Welcome to Rest Controller in Springboot", HttpStatus.OK);
 	}
 	
 	@GetMapping("/restgreet")
